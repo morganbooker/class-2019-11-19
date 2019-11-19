@@ -10,5 +10,40 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(tidymodels)
 library(skimr)
+library(fs)
+```
+
+```{r}
+unzip("2018-live-poll-results-master.zip")
+
+x <- read_csv("2018-live-poll-results-master/data/elections-poll-az02-1.csv", col_types = cols(
+  .default = col_character(),
+  turnout_scale = col_double(),
+  turnout_score = col_double(),
+  w_LV = col_double(),
+  w_RV = col_double(),
+  final_weight = col_double(),
+  timestamp = col_datetime(format = "")
+))
+
+files <- list.files(path = "2018-live-poll-results-master/data", pattern = "*.csv", full.names = T)
+
+tbl <- sapply(files, read_csv, simplify=FALSE) %>% 
+  bind_rows(.id = "id")
+
+my_list <- dir_ls("2018-live-poll-results-master/data/")
+my_list
+
+raw <- map_dfr(my_list, read_csv)
+
+skim(x)
+
+```
+
+
+```{r}
+
+
+
 ```
 

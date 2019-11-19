@@ -370,7 +370,2285 @@ summary {
 </div>
 
 
+<pre class="r"><code>unzip(&quot;2018-live-poll-results-master.zip&quot;)
 
+x &lt;- read_csv(&quot;2018-live-poll-results-master/data/elections-poll-az02-1.csv&quot;, col_types = cols(
+  .default = col_character(),
+  turnout_scale = col_double(),
+  turnout_score = col_double(),
+  w_LV = col_double(),
+  w_RV = col_double(),
+  final_weight = col_double(),
+  timestamp = col_datetime(format = &quot;&quot;)
+))
+
+files &lt;- list.files(path = &quot;2018-live-poll-results-master/data&quot;, pattern = &quot;*.csv&quot;, full.names = T)
+
+tbl &lt;- sapply(files, read_csv, simplify=FALSE) %&gt;% 
+  bind_rows(.id = &quot;id&quot;)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre class="r"><code>my_list &lt;- dir_ls(&quot;2018-live-poll-results-master/data/&quot;)
+my_list</code></pre>
+<pre><code>## 2018-live-poll-results-master/data/elections-poll-az02-1.csv
+## 2018-live-poll-results-master/data/elections-poll-az06-3.csv
+## 2018-live-poll-results-master/data/elections-poll-azsen-3.csv
+## 2018-live-poll-results-master/data/elections-poll-ca10-3.csv
+## 2018-live-poll-results-master/data/elections-poll-ca25-1.csv
+## 2018-live-poll-results-master/data/elections-poll-ca25-3.csv
+## 2018-live-poll-results-master/data/elections-poll-ca39-3.csv
+## 2018-live-poll-results-master/data/elections-poll-ca45-1.csv
+## 2018-live-poll-results-master/data/elections-poll-ca45-3.csv
+## 2018-live-poll-results-master/data/elections-poll-ca48-1.csv
+## 2018-live-poll-results-master/data/elections-poll-ca48-3.csv
+## 2018-live-poll-results-master/data/elections-poll-ca49-1.csv
+## 2018-live-poll-results-master/data/elections-poll-ca49-3.csv
+## 2018-live-poll-results-master/data/elections-poll-co06-1.csv
+## 2018-live-poll-results-master/data/elections-poll-co06-3.csv
+## 2018-live-poll-results-master/data/elections-poll-fl15-3.csv
+## 2018-live-poll-results-master/data/elections-poll-fl26-1.csv
+## 2018-live-poll-results-master/data/elections-poll-fl26-3.csv
+## 2018-live-poll-results-master/data/elections-poll-fl27-3.csv
+## 2018-live-poll-results-master/data/elections-poll-flgov-3.csv
+## 2018-live-poll-results-master/data/elections-poll-flsen-3.csv
+## 2018-live-poll-results-master/data/elections-poll-ga06-3.csv
+## 2018-live-poll-results-master/data/elections-poll-ia01-1.csv
+## 2018-live-poll-results-master/data/elections-poll-ia01-3.csv
+## 2018-live-poll-results-master/data/elections-poll-ia03-1.csv
+## 2018-live-poll-results-master/data/elections-poll-ia03-3.csv
+## 2018-live-poll-results-master/data/elections-poll-ia04-3.csv
+## 2018-live-poll-results-master/data/elections-poll-il06-1.csv
+## 2018-live-poll-results-master/data/elections-poll-il06-3.csv
+## 2018-live-poll-results-master/data/elections-poll-il12-1.csv
+## 2018-live-poll-results-master/data/elections-poll-il12-3.csv
+## 2018-live-poll-results-master/data/elections-poll-il13-3.csv
+## 2018-live-poll-results-master/data/elections-poll-il14-1.csv
+## 2018-live-poll-results-master/data/elections-poll-il14-3.csv
+## 2018-live-poll-results-master/data/elections-poll-ks02-1.csv
+## 2018-live-poll-results-master/data/elections-poll-ks02-3.csv
+## 2018-live-poll-results-master/data/elections-poll-ks03-1.csv
+## 2018-live-poll-results-master/data/elections-poll-ks03-3.csv
+## 2018-live-poll-results-master/data/elections-poll-ky06-1.csv
+## 2018-live-poll-results-master/data/elections-poll-ky06-3.csv
+## 2018-live-poll-results-master/data/elections-poll-me02-1.csv
+## 2018-live-poll-results-master/data/elections-poll-me02-3.csv
+## 2018-live-poll-results-master/data/elections-poll-mi08-1.csv
+## 2018-live-poll-results-master/data/elections-poll-mi08-3.csv
+## 2018-live-poll-results-master/data/elections-poll-mi11-1.csv
+## 2018-live-poll-results-master/data/elections-poll-mn02-1.csv
+## 2018-live-poll-results-master/data/elections-poll-mn03-1.csv
+## 2018-live-poll-results-master/data/elections-poll-mn08-1.csv
+## 2018-live-poll-results-master/data/elections-poll-mn08-3.csv
+## 2018-live-poll-results-master/data/elections-poll-nc09-1.csv
+## 2018-live-poll-results-master/data/elections-poll-nc09-3.csv
+## 2018-live-poll-results-master/data/elections-poll-nc13-1.csv
+## 2018-live-poll-results-master/data/elections-poll-ne02-1.csv
+## 2018-live-poll-results-master/data/elections-poll-nj03-1.csv
+## 2018-live-poll-results-master/data/elections-poll-nj03-3.csv
+## 2018-live-poll-results-master/data/elections-poll-nj07-1.csv
+## 2018-live-poll-results-master/data/elections-poll-nj07-3.csv
+## 2018-live-poll-results-master/data/elections-poll-nj11-3.csv
+## 2018-live-poll-results-master/data/elections-poll-nm02-1.csv
+## 2018-live-poll-results-master/data/elections-poll-nm02-3.csv
+## 2018-live-poll-results-master/data/elections-poll-nvsen-2.csv
+## 2018-live-poll-results-master/data/elections-poll-ny01-1.csv
+## 2018-live-poll-results-master/data/elections-poll-ny11-3.csv
+## 2018-live-poll-results-master/data/elections-poll-ny19-3.csv
+## 2018-live-poll-results-master/data/elections-poll-ny22-3.csv
+## 2018-live-poll-results-master/data/elections-poll-ny27-3.csv
+## 2018-live-poll-results-master/data/elections-poll-oh01-1.csv
+## 2018-live-poll-results-master/data/elections-poll-oh01-3.csv
+## 2018-live-poll-results-master/data/elections-poll-pa01-2.csv
+## 2018-live-poll-results-master/data/elections-poll-pa01-3.csv
+## 2018-live-poll-results-master/data/elections-poll-pa07-1.csv
+## 2018-live-poll-results-master/data/elections-poll-pa08-3.csv
+## 2018-live-poll-results-master/data/elections-poll-pa10-3.csv
+## 2018-live-poll-results-master/data/elections-poll-pa16-1.csv
+## 2018-live-poll-results-master/data/elections-poll-tnsen-2.csv
+## 2018-live-poll-results-master/data/elections-poll-tx07-1.csv
+## 2018-live-poll-results-master/data/elections-poll-tx07-3.csv
+## 2018-live-poll-results-master/data/elections-poll-tx23-1.csv
+## 2018-live-poll-results-master/data/elections-poll-tx23-3.csv
+## 2018-live-poll-results-master/data/elections-poll-tx31-1.csv
+## 2018-live-poll-results-master/data/elections-poll-tx32-1.csv
+## 2018-live-poll-results-master/data/elections-poll-tx32-3.csv
+## 2018-live-poll-results-master/data/elections-poll-txsen-2.csv
+## 2018-live-poll-results-master/data/elections-poll-ut04-3.csv
+## 2018-live-poll-results-master/data/elections-poll-va02-1.csv
+## 2018-live-poll-results-master/data/elections-poll-va02-3.csv
+## 2018-live-poll-results-master/data/elections-poll-va05-3.csv
+## 2018-live-poll-results-master/data/elections-poll-va07-1.csv
+## 2018-live-poll-results-master/data/elections-poll-va07-3.csv
+## 2018-live-poll-results-master/data/elections-poll-va10-3.csv
+## 2018-live-poll-results-master/data/elections-poll-wa03-3.csv
+## 2018-live-poll-results-master/data/elections-poll-wa08-1.csv
+## 2018-live-poll-results-master/data/elections-poll-wa08-3.csv
+## 2018-live-poll-results-master/data/elections-poll-wi01-1.csv
+## 2018-live-poll-results-master/data/elections-poll-wv03-1.csv
+## 2018-live-poll-results-master/data/elections-poll-wv03-3.csv</code></pre>
+<pre class="r"><code>raw &lt;- map_dfr(my_list, read_csv)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )
+## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   turnout_scale = col_double(),
+##   turnout_score = col_double(),
+##   w_LV = col_double(),
+##   w_RV = col_double(),
+##   final_weight = col_double(),
+##   timestamp = col_datetime(format = &quot;&quot;)
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre class="r"><code>skim(x)</code></pre>
+<pre><code>## Skim summary statistics
+##  n obs: 502 
+##  n variables: 33 
+## 
+## ── Variable type:character ───────────────────────────────────────────────────────────────────────────────────────
+##         variable missing complete   n min max empty n_unique
+##     age_combined       0      502 502   8  12     0        4
+##    age_combinedd       0      502 502   8  12     0        3
+##             ager       0      502 502   8  21     0        5
+##           APPKAV       0      502 502   6  10     0        3
+##          approve       0      502 502   7  10     0        3
+##            CHECK       0      502 502   5  10     0        3
+##             educ       0      502 502  11  31     0        6
+##            educ3       0      502 502  19  32     0        4
+##            educ4       0      502 502  18  32     0        5
+##         FEMINISM       0      502 502   6  10     0        3
+##       file_party       0      502 502   5  10     0        3
+##        file_race       0      502 502   5   8     0        6
+##  file_race_white       0      502 502   5   9     0        3
+##        genballot       0      502 502  10  16     0        3
+##           gender       0      502 502   4   6     0        2
+##  gender_combined       0      502 502   4   6     0        2
+##         hdem_fav       0      502 502   9  11     0        3
+##         hrep_fav       0      502 502   9  11     0        3
+##           likely       0      502 502  11  32     0        6
+##          partyid       0      502 502   8  41     0        5
+##       phone_type       0      502 502   4   8     0        2
+##         race_edu       0      502 502   8  32     0        4
+##         race_eth       0      502 502   5  32     0        6
+##           region       0      502 502   4   7     0        2
+##         response       0      502 502   3   3     0        3
+##    turnout_class       0      502 502  16  20     0        3
+##            WOMEN       0      502 502   5  10     0        3
+## 
+## ── Variable type:numeric ─────────────────────────────────────────────────────────────────────────────────────────
+##       variable missing complete   n mean   sd   p0  p25  p50  p75 p100
+##   final_weight       0      502 502 1    0.28 0.3  0.78 1.01 1.18 2.12
+##  turnout_scale       0      502 502 0.93 0.21 0    1    1    1    1   
+##  turnout_score       0      502 502 0.84 0.21 0.05 0.76 0.94 0.99 1   
+##           w_LV       0      502 502 1    0.24 0.49 0.79 1.01 1.16 1.76
+##           w_RV       0      502 502 1    0.99 0.34 0.57 0.73 0.94 7.4 
+##      hist
+##  ▁▅▆▇▃▁▁▁
+##  ▁▁▁▁▁▁▁▇
+##  ▁▁▁▁▁▁▂▇
+##  ▃▆▆▇▇▂▁▁
+##  ▇▁▁▁▁▁▁▁
+## 
+## ── Variable type:POSIXct ─────────────────────────────────────────────────────────────────────────────────────────
+##   variable missing complete   n        min        max     median n_unique
+##  timestamp       0      502 502 2018-09-26 2018-10-02 2018-09-28      483</code></pre>
 
 
 
