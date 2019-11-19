@@ -34,16 +34,37 @@ tbl <- sapply(files, read_csv, simplify=FALSE) %>%
 my_list <- dir_ls("2018-live-poll-results-master/data/")
 my_list
 
-raw <- map_dfr(my_list, read_csv)
+raw <- map_dfr(my_list, .id = "source", read_csv, col_types = cols(
+  .default = col_character(),
+  turnout_scale = col_double(),
+  turnout_score = col_double(),
+  w_LV = col_double(),
+  w_RV = col_double(),
+  final_weight = col_double(),
+  timestamp = col_datetime(format = "")
+))
 
 skim(x)
 
-```
+file_delete(c("2018-live-poll-results-master.zip", "2018-live-poll-results-master/"))
 
+```
 
 ```{r}
 
+z <- raw %>% 
+  mutate(dvote = ifelse(response == "Dem", 1, 0),
+         female = ifelse(gender == "Female", 1, 0)) %>% 
+  select(dvote, female, response, gender)
 
+z %>% 
+  select(response, dvote, female, gender)
+
+mod <- lm(data = z, formula = dvote ~ female)
+summary(mod)
+
+ggplot(z, aes(dvote, female)) +
+  geom_jitter(alpha = .1)
 
 ```
 
