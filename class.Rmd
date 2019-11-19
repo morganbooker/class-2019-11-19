@@ -60,8 +60,18 @@ z <- raw %>%
 z %>% 
   select(response, dvote, female, gender)
 
-mod <- lm(data = z, formula = dvote ~ female)
+mod <- glm(dvote ~ female, data = z, family = "binomial")
+mod
 summary(mod)
+
+my_data <- tibble(female = c(0,0, 1))
+
+predict(mod, newdata = my_data, type = "response")
+
+z <- z %>% 
+  mutate(prediction = predict(mod, type = "response"))
+z
+
 
 ggplot(z, aes(dvote, female)) +
   geom_jitter(alpha = .1)
